@@ -11,7 +11,16 @@ class _LoginViewState extends State<LoginView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Login')),
+      appBar: AppBar(
+        title: Align(
+          alignment: AlignmentGeometry.centerLeft,
+          child: Text(
+            'Welcome',
+            style: TextStyle(color: Colors.blue, fontWeight: FontWeight.bold),
+          ),
+        ),
+      ),
+
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -21,24 +30,75 @@ class _LoginViewState extends State<LoginView> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                Image.asset(
+                  'assets/images/blueIcon.png',
+                  width: 80,
+                  height: 80,
+                ),
+
+                SizedBox(height: 20),
+
                 Text(
-                  "Login",
+                  "Welcome Back!",
                   style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
                 ),
-            
+
                 Text(
-                  "Welcome back! Please login to your account.",
-                  style: TextStyle(fontSize: 16, color: const Color.fromARGB(255, 127, 113, 113)),
-                ),
-                TextField(decoration: InputDecoration(hintText: "Username")),
-            
-                TextField(decoration: InputDecoration(hintText: "Password")),
-                Center(
-                  child: TextButton(
-                    onPressed: () {},
-                    child: Text("Forget Your Password?"),
+                  "We're so glad to see you again. Let's get you back on track.",
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: const Color.fromARGB(255, 127, 113, 113),
                   ),
                 ),
+                SizedBox(height: 30),
+                Text(
+                  "Email Address",
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+
+                TextField(
+                  decoration: InputDecoration(
+                    hintText: "e.g. hello@example.com",
+                  ),
+                ),
+
+                Text(
+                  "Use the email you registerd with.",
+                  style: TextStyle(
+                    fontStyle: FontStyle.italic,
+                    color: Colors.grey,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(height: 20),
+                Row(
+                  children: [
+                    Text(
+                      "Password",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(width: 90),
+                    TextButton(
+                      onPressed: () {},
+                      child: Text("Forget Your Password?"),
+                    ),
+                  ],
+                ),
+
+                TextField(
+                  decoration: InputDecoration(hintText: "Enter your password"),
+                ),
+                Text(
+                  "Passwords are case-sensitive.",
+                  style: TextStyle(
+                    fontStyle: FontStyle.italic,
+                    color: Colors.grey,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                //Center(
+
+                //),
               ],
             ),
           ),
@@ -46,18 +106,19 @@ class _LoginViewState extends State<LoginView> {
             children: [
               Expanded(
                 child: Container(
-                  decoration: BoxDecoration(color: const Color.fromARGB(255, 194, 195, 195)),
+                  decoration: BoxDecoration(
+                    color: const Color.fromARGB(255, 36, 97, 163),
+                  ),
 
-                  child: Center(child: Text("Login", style: TextStyle(color: Colors.white),)),
+                  child: Center(
+                    child: Text(
+                      "Sign In",
+                      style: TextStyle(
+                        color: const Color.fromARGB(255, 255, 255, 255),
+                      ),
+                    ),
+                  ),
 
-                  height: 50,
-                ),
-              ),
-
-              Expanded(
-                child: Container(
-                  decoration: BoxDecoration(color: const Color.fromARGB(255, 21, 38, 78)),
-                  child: Center(child: Text("Signup", style: TextStyle(color: Colors.white),)),
                   height: 50,
                 ),
               ),
