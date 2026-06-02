@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class register_view extends StatefulWidget {
-  const register_view({super.key});
+class RigsterView extends StatefulWidget {
+  const RigsterView({super.key});
 
   @override
-  State<register_view> createState() => _RegisterViewState();
+  State<RigsterView> createState() => _RegisterViewState();
 }
 
-class _RegisterViewState extends State<register_view> {
+class _RegisterViewState extends State<RigsterView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -115,6 +115,7 @@ class _RegisterViewState extends State<register_view> {
 
                   child: Center(
                     child: Text(
+                      
                       "Create Account",
                       style: TextStyle(
                         color: const Color.fromARGB(255, 255, 255, 255),

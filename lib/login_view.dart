@@ -1,3 +1,4 @@
+import 'package:course_app/register_view.dart';
 import 'package:flutter/material.dart';
 
 class LoginView extends StatefulWidget {
@@ -82,6 +83,7 @@ class _LoginViewState extends State<LoginView> {
                       onPressed: () {},
                       child: Text("Forget Your Password?"),
                     ),
+                    
                   ],
                 ),
 
@@ -124,6 +126,20 @@ class _LoginViewState extends State<LoginView> {
               ),
             ],
           ),
+           Row(
+                  children: [
+                   
+                    SizedBox(width: 90,),
+                    TextButton(
+                      onPressed: () {
+                       Navigator.push(context, MaterialPageRoute(builder: (context) => RigsterView(),));
+
+                      },
+                      child: Text("Don't have an account?"),
+                    ),
+                    
+                  ],
+                ),
         ],
       ),
     );
