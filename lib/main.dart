@@ -1,5 +1,7 @@
+import 'package:course_app/home_page.dart';
 import 'package:course_app/login_view.dart';
 import 'package:course_app/register_view.dart';
+import 'package:course_app/views/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,10 +13,6 @@ class CourseApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
-    return MaterialApp(
-      
-      home: LoginView()
-      );
+    return MaterialApp(home: SplashScreen());
   }
 }
